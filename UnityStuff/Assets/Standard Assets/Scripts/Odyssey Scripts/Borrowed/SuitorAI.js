@@ -1,8 +1,9 @@
 
 var speed = 3.0;
 var damage = 10;
+var waitTime = 10;
 
-
+private var waitTimer = 0.0;
 private var rotationSpeed = 5.0;
 
 var attackRange = 1.97;
@@ -30,7 +31,6 @@ private var target : Transform;
 private var isMelee = true;
 
 var WayPointHolder : Transform;
-var GoodGuy : boolean;
 
 private var patrolPoints : Transform[]; 
 var projectile : Rigidbody;
@@ -62,9 +62,8 @@ function Start () {
 			patrolPoints[i] = WayPointHolder.GetChild(i);
 		
 		
-		} 
-		
-		curPatrol = Random.Range(0, patrolPoints.Length);
+		}
+	
 	}
 		
 	Patrol();
@@ -77,14 +76,23 @@ function Start () {
 function Patrol () {
 	if(patrolPoints.length > 0) 
 		var curWayPoint = patrolPoints[curPatrol];
+		
+	Debug.Log(patrolPoints.Length + " " + curPatrol);
 
 	while (true) {
 		
 		if(patrolPoints.length > 0) 
 		{
 			var waypointPosition = curWayPoint.position;
-			if (Vector3.Distance(waypointPosition, transform.position) < pickNextWaypointDistance)
-				curWayPoint = PickNextWaypoint (curWayPoint);
+			if (Vector3.Distance(waypointPosition, transform.position) < pickNextWaypointDistance) {
+				if (waitTimer >= waitTime) {
+					curWayPoint = PickNextWaypoint (curWayPoint);
+					waitTimer = 0;
+				}
+				else {
+					waitTimer += Time.deltaTime;
+				}
+			}
 		}
 		// Pursue the player and wait until
 		// - player is killed
@@ -266,26 +274,9 @@ function PickNextWaypoint (currentWaypoint : Transform) {
 	// We want to find the waypoint where the character has to turn the least
 
 	// The direction in which we are walking
-	//curPatrol++;
-	//if(curPatrol >= patrolPoints.length)
-	//	curPatrol = 0; 
-	
-	//Next waypoint is random
-	var tempNewIndexForPatrol = Random.Range(0, patrolPoints.length - 2);
-	
-	if (tempNewIndexForPatrol >= curPatrol) {
-		tempNewIndexForPatrol++;
-	} 
-	
-	curPatrol = tempNewIndexForPatrol;
-		
-	//Update sorrow and courage counts
-	//if (GoodGuy == true) {
-	//	GameLoop.IncrementCourage();
-	//}
-	//else {
-	//	GameLoop.IncrementSorrow();
-	//}
+	curPatrol++;
+	if(curPatrol >= patrolPoints.length)
+		curPatrol = 0;
 	
 	return patrolPoints[curPatrol];
 }
