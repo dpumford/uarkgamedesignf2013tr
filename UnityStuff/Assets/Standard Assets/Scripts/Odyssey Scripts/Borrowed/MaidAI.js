@@ -1,4 +1,8 @@
 var bad : boolean;
+private var badWords = ["Odysseus sucks!",
+				"He is a bad dude."];
+var goodWords = ["Odysseus rules!"];
+
 var baseSpeed = 3.0;
 var chaseSpeed = 6.0;
 var damage = 10;
@@ -10,6 +14,8 @@ var attackRange = 1.97;
 var PursueRange = 30.0;
 var pursueAngle = 360.0;
 private var attackAngle = 4.0;
+
+var TalkRange = 30.0;
 
 private var idleTime = 1.6;
 
@@ -86,8 +92,20 @@ function Patrol () {
 		// Pursue the player and wait until
 		// - player is killed
 		// - player is out of sight		
-		if (bad && CanSeeTarget ())
-			yield StartCoroutine("PursuePlayer");
+		if (CanSeeTarget ()) {
+			if (bad) {
+				yield StartCoroutine("PursuePlayer");
+			}
+		}
+		
+		if (OdysseusClose()) {
+			if (bad) {
+				SaySomething(badWords[Random.Range(0, badWords.Length)]);
+			}
+			else {
+				SaySomething(goodWords[Random.Range(0, goodWords.Length)]);
+			}
+		}
 		
 		// Move towards our target
 		if(patrolPoints.length > 0) 
@@ -118,6 +136,10 @@ function CanSeeTarget () : boolean {
 			return hit.transform == target;
 
 	return false;
+}
+
+function OdysseusClose () : boolean {
+	return Vector3.Distance(transform.position, target.position) < TalkRange;
 }
 
 function attack () {
@@ -301,4 +323,10 @@ function OnDrawGizmosSelected ()
 	
 	Gizmos.color = Color.green;
 	Gizmos.DrawWireSphere(transform.position, attackRange);
+}
+
+function SaySomething(thing : String) {
+	var gui : GuiLevel1 = GameObject.FindWithTag("guiholder").GetComponent(GuiLevel1);
+	gui.SetMessage(thing);
+	Debug.Log(badWords.Length);
 }

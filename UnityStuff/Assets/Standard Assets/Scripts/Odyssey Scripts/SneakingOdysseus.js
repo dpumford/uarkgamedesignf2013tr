@@ -1,9 +1,15 @@
 ﻿var maxNumWeapons = 2;
-private var weapons : GameObject[];
+private var weapons : String[];
 private var currentWeapon = 0;
 
+private var thingsToSay = ["I'll just put these here.",
+						   "Grunt",
+						   "Telemachus had better know how to use these."];
+
 function Start () {
-	weapons = new GameObject[maxNumWeapons];
+	weapons = new String[maxNumWeapons];
+	
+	SaySomething("I should probably hide these weapons somewhere...");
 }
 
 function Update () {
@@ -11,22 +17,41 @@ function Update () {
 }
 
 function OnTriggerEnter(other : Collider) {
-	Debug.Log(other.tag);
-
-	if (other.tag == "weapon") {
+	if (other.tag == "sword" ||
+		other.tag == "shield" ||
+		other.tag == "spear") {
 		if (currentWeapon < maxNumWeapons) {
-			//TODO: Store weapon
-			//weapons[currentWeapon] = other;
+			Debug.Log("Picked up " + other.tag + " " + currentWeapon);
+			
+			weapons[currentWeapon] = other.tag;
 			currentWeapon++;
 			
 			other.active = false;
+			
 		}
 	}
 	else if (other.tag == "cache") {
-		//TODO: Check to make sure the cache is not full
+		var cacheScript : CacheScript = other.GetComponent(CacheScript);
+		var numSlotsLeft = cacheScript.NumSlotsLeft();
 		
-		//TODO: Add Odysseus' weapons to cache
-		other.SendMessage("AddWeapons", currentWeapon, SendMessageOptions.DontRequireReceiver);
-		currentWeapon = 0;
+		if (numSlotsLeft > 0) {
+			SaySomething(thingsToSay[Random.Range(0, thingsToSay.Length)]);
+		}
+		
+		currentWeapon--;
+		
+		while (currentWeapon >= 0 && numSlotsLeft > 0) {
+			other.SendMessage("AddWeapon", weapons[currentWeapon], SendMessageOptions.DontRequireReceiver);
+			
+			Debug.Log("Dropped off " + weapons[currentWeapon] + " " + currentWeapon);
+			currentWeapon--;
+		}
+		
+		currentWeapon++;
 	}
+}
+
+function SaySomething(thing : String) {
+	var gui : GuiLevel1 = GameObject.FindWithTag("guiholder").GetComponent(GuiLevel1);
+	gui.SetMessage(thing);
 }
