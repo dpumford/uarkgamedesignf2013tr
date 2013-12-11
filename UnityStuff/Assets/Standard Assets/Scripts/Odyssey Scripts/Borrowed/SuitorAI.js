@@ -173,11 +173,11 @@ function attack () {
 function Fire()
 {
 		var clone : Rigidbody;
-        clone = Instantiate(projectile, transform.position+ transform.TransformDirection (Vector3.forward *2) , transform.rotation);
+		clone = Instantiate(projectile, this.transform.position, this.transform.rotation);
         
         // Give the cloned object an initial velocity along the current 
         // object's Z axis
-        clone.velocity = transform.TransformDirection (Vector3.forward * force);	
+        clone.AddForce(transform.forward * force);	
 	
 }
 function PursuePlayer () {
