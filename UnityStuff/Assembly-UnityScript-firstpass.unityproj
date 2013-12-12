@@ -56,6 +56,7 @@
      <Compile Include="Assets\Standard Assets\Scripts\Camera Scripts\SmoothFollow.js" />
      <Compile Include="Assets\Standard Assets\Scripts\Camera Scripts\SmoothLookAt.js" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\DragRigidbody.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\Odyssey Scripts\ArrowsLevel2.js" />
      <Compile Include="Assets\Standard Assets\Scripts\Odyssey Scripts\AttackingOdysseus.js" />
      <Compile Include="Assets\Standard Assets\Scripts\Odyssey Scripts\Borrowed\AutoWayPoint.js" />
      <Compile Include="Assets\Standard Assets\Scripts\Odyssey Scripts\Borrowed\Enemy.js" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\Standard Assets\Scripts\Odyssey Scripts\Borrowed\TargetDamage.js" />
      <Compile Include="Assets\Standard Assets\Scripts\Odyssey Scripts\CacheScript.js" />
      <Compile Include="Assets\Standard Assets\Scripts\Odyssey Scripts\GuiLevel1.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\Odyssey Scripts\GuiLevel2.js" />
      <Compile Include="Assets\Standard Assets\Scripts\Odyssey Scripts\Level1Manager.js" />
      <Compile Include="Assets\Standard Assets\Scripts\Odyssey Scripts\Level2Manager.js" />
      <Compile Include="Assets\Standard Assets\Scripts\Odyssey Scripts\Level3Manager.js" />
