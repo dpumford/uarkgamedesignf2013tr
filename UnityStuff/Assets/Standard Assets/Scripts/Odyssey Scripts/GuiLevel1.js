@@ -26,10 +26,18 @@ function OnGUI() {
 	
 		numCachedWeapons += cacheScript.NumWeapons();
 	}
+	
+	var inventory = "Inventory\n";
+	var sneakingOdysseus : SneakingOdysseus = GameObject.FindWithTag("Player").GetComponent(SneakingOdysseus);
+	
+	for (var w = 0; w < sneakingOdysseus.CarriedWeapons().Length; w++) {
+		inventory += sneakingOdysseus.CarriedWeapons()[w] + "\n";
+	}
 
-	GUI.Box(Rect(0, 0, 100, 32), numWeapons + "");
-	GUI.Box(Rect(100, 0, 100, 32), numCachedWeapons + "");
-	GUI.Box(Rect(200, 0, 500, 32), message);
+	GUI.Box(Rect(0, 0, 150, 32), "Weapons Left: " + numWeapons);
+	GUI.Box(Rect(150, 0, 150, 32), "Weapons Cached: " + numCachedWeapons);
+	GUI.Box(Rect(300, 0, 500, 32), message);
+	GUI.Box(Rect(0, 32, 150, 96), inventory);
 }
 
 function SetMessage(msg : String) {

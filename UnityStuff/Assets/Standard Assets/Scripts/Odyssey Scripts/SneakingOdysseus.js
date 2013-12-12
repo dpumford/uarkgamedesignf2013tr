@@ -44,6 +44,7 @@ function OnTriggerEnter(other : Collider) {
 			other.SendMessage("AddWeapon", weapons[currentWeapon], SendMessageOptions.DontRequireReceiver);
 			
 			Debug.Log("Dropped off " + weapons[currentWeapon] + " " + currentWeapon);
+			weapons[currentWeapon] = "";
 			currentWeapon--;
 		}
 		
@@ -54,4 +55,8 @@ function OnTriggerEnter(other : Collider) {
 function SaySomething(thing : String) {
 	var gui : GuiLevel1 = GameObject.FindWithTag("guiholder").GetComponent(GuiLevel1);
 	gui.SetMessage(thing);
+}
+
+function CarriedWeapons() : String[] {
+	return weapons;
 }

@@ -16,6 +16,8 @@ var pursueAngle = 360.0;
 private var attackAngle = 4.0;
 
 var TalkRange = 30.0;
+var talkRate = 10.0;
+private var nextTalk = 0.0;
 
 private var idleTime = 1.6;
 
@@ -98,13 +100,14 @@ function Patrol () {
 			}
 		}
 		
-		if (OdysseusClose()) {
+		if (OdysseusClose() && Time.time >= nextTalk) {
 			if (bad) {
 				SaySomething(badWords[Random.Range(0, badWords.Length)]);
 			}
 			else {
 				SaySomething(goodWords[Random.Range(0, goodWords.Length)]);
 			}
+			nextTalk = Time.time + talkRate;
 		}
 		
 		// Move towards our target

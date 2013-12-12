@@ -23,20 +23,10 @@ function Update () {
 }
 
 function OnGUI() {
-//	var arrowScript : ArrowsLevel2;
-	
-//	var caches = GameObject.FindGameObjectsWithTag("cache");
-//	var numCachedWeapons = 0;
-//	
-//	for (var c = 0; c < caches.Length; c++) {
-//		var cacheScript : CacheScript = caches[c].GetComponent(CacheScript);
-//	
-//		numCachedWeapons += cacheScript.NumWeapons();
-//	}
+	var shootingOdysseus : ShootingOdysseus = GameObject.FindWithTag("MainCamera").GetComponent(ShootingOdysseus);
 
-	GUI.Box(Rect(0, 0, 100, 32), numArrows + "");
-//	GUI.Box(Rect(100, 0, 100, 32), numCachedWeapons + "");
-	GUI.Box(Rect(100, 0, 500, 32), message);
+	GUI.Box(Rect(0, 0, 150, 32), "Arrows: " + shootingOdysseus.NumberArrows());
+	GUI.Box(Rect(150, 0, 500, 32), message);
 }
 
 function SetMessage(msg : String) {
