@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: 8a43b571f3d41426b941ebe8542250a6
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Blade
+    100004: Cap 1
+    100006: Cap 1.2
+    100008: Cap 1.3
+    100010: Cap 2
+    100012: Cap 2.2
+    100014: Cap 2.3
+    100016: Chappe
+    100018: Guard
+    100020: Handle
+    100022: Pommel
+    100024: Sphere
+    100026: Sphere.1
+    400000: //RootNode
+    400002: Blade
+    400004: Cap 1
+    400006: Cap 1.2
+    400008: Cap 1.3
+    400010: Cap 2
+    400012: Cap 2.2
+    400014: Cap 2.3
+    400016: Chappe
+    400018: Guard
+    400020: Handle
+    400022: Pommel
+    400024: Sphere
+    400026: Sphere.1
+    2300000: Blade
+    2300002: Cap 1
+    2300004: Cap 1.2
+    2300006: Cap 1.3
+    2300008: Cap 2
+    2300010: Cap 2.2
+    2300012: Cap 2.3
+    2300014: Chappe
+    2300016: Guard
+    2300018: Handle
+    2300020: Pommel
+    2300022: Sphere
+    2300024: Sphere.1
+    3300000: Blade
+    3300002: Cap 1
+    3300004: Cap 1.2
+    3300006: Cap 1.3
+    3300008: Cap 2
+    3300010: Cap 2.2
+    3300012: Cap 2.3
+    3300014: Chappe
+    3300016: Guard
+    3300018: Handle
+    3300020: Pommel
+    3300022: Sphere
+    3300024: Sphere.1
+    4300000: Handle
+    4300002: Pommel
+    4300004: Blade
+    4300006: Chappe
+    4300008: Cap 1
+    4300010: Cap 2
+    4300012: Guard
+    4300014: Sphere.1
+    4300016: Sphere
+    4300018: Cap 1.2
+    4300020: Cap 2.2
+    4300022: Cap 1.3
+    4300024: Cap 2.3
+    6400000: Blade
+    6400002: Cap 1
+    6400004: Cap 1.2
+    6400006: Cap 1.3
+    6400008: Cap 2
+    6400010: Cap 2.2
+    6400012: Cap 2.3
+    6400014: Chappe
+    6400016: Guard
+    6400018: Handle
+    6400020: Pommel
+    6400022: Sphere
+    6400024: Sphere.1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

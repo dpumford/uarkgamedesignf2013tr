@@ -24,9 +24,11 @@ function Update () {
 
 function OnGUI() {
 	var shootingOdysseus : ShootingOdysseus = GameObject.FindWithTag("MainCamera").GetComponent(ShootingOdysseus);
+	var numSuitors = GameObject.FindGameObjectsWithTag("suitor").Length;
 
 	GUI.Box(Rect(0, 0, 150, 32), "Arrows: " + shootingOdysseus.NumberArrows());
-	GUI.Box(Rect(150, 0, 500, 32), message);
+	GUI.Box(Rect(150, 0, 150, 32), "Suitors: " + numSuitors);
+	GUI.Box(Rect(300, 0, 500, 32), message);
 }
 
 function SetMessage(msg : String) {

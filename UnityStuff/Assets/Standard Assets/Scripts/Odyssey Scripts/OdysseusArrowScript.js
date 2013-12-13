@@ -5,7 +5,8 @@ function Start () {
 }
 
 function Update () {
-
+	transform.LookAt(transform.position + rigidbody.velocity);
+	transform.Rotate(0, 90 , 0);
 }
 
 function OnTriggerEnter(other : Collider) {
