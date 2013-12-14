@@ -6,6 +6,10 @@ function Start () {
 
 }
 
+function Awake() {
+	DontDestroyOnLoad (transform.gameObject);
+}
+
 function Update () {
 
 }

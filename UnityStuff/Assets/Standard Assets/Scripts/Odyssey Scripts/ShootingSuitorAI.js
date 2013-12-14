@@ -1,5 +1,6 @@
 var speed = 3.0;
 var damage = 10;
+var numSpears = 5;
 var waitTime = 10;
 var attackTime = 1;
 
@@ -46,13 +47,14 @@ function Update() {
 		else {
 			waitTimer += Time.deltaTime;
 			
-			if (attackTimer >= attackTime) {
+			if (numSpears > 0 && attackTimer >= attackTime) {
 				var newProjectile = Instantiate(projectile, this.transform.position, this.transform.rotation);
 				
 				//Physics.IgnoreCollision(newProjectile.collider, transform.root.collider);
 				newProjectile.AddForce(transform.forward * force);
 				
 				attackTimer = 0.0;
+				numSpears--;
 			}
 			else {
 				attackTimer += Time.deltaTime;
@@ -63,5 +65,5 @@ function Update() {
 		transform.position += (speed * directionToWaypoint.normalized * Time.deltaTime);
 	}
 	
-	transform.LookAt(target.transform.position + Vector3(0, 2, 0));
+	transform.LookAt(target.transform.position + Vector3(Random.Range(-1, 1), 5, Random.Range(-1, 1)));
 }

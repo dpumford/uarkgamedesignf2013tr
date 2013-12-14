@@ -1,0 +1,78 @@
+-target:library
+-i:UnityEngine
+-i:System.Collections
+-base:UnityEngine.MonoBehaviour
+-nowarn:BCW0016
+-nowarn:BCW0003
+-method:Main
+-out:Temp/Assembly-UnityScript-firstpass.dll
+-x-type-inference-rule-attribute:UnityEngineInternal.TypeInferenceRuleAttribute
+-debug
+-define:UNITY_STANDALONE_OSX
+-define:ENABLE_MICROPHONE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_AUDIO_FMOD
+-define:UNITY_STANDALONE
+-define:ENABLE_MONO
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_GENERICS
+-define:ENABLE_SUBSTANCE
+-define:INCLUDE_WP8SUPPORT
+-define:ENABLE_MOVIES
+-define:ENABLE_WWW
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_WEBCAM
+-define:INCLUDE_METROSUPPORT
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_NETWORK
+-define:ENABLE_PHYSICS
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_GAMECENTER
+-define:ENABLE_SHADOWS
+-define:ENABLE_AUDIO
+-define:ENABLE_NAVMESH_CARVING
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:UNITY_4_3_0
+-define:UNITY_4_3
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_OSX
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
+-i:UnityEditor
+'Assets/Standard Assets/Character Controllers/Sources/Scripts/CharacterMotor.js'
+'Assets/Standard Assets/Character Controllers/Sources/Scripts/FPSInputController.js'
+'Assets/Standard Assets/Character Controllers/Sources/Scripts/PlatformInputController.js'
+'Assets/Standard Assets/Character Controllers/Sources/Scripts/ThirdPersonCamera.js'
+'Assets/Standard Assets/Character Controllers/Sources/Scripts/ThirdPersonController.js'
+'Assets/Standard Assets/Particles/Legacy Particles/TimedObjectDestructor.js'
+'Assets/Standard Assets/Scripts/Camera Scripts/MouseOrbit.js'
+'Assets/Standard Assets/Scripts/Camera Scripts/SmoothFollow.js'
+'Assets/Standard Assets/Scripts/Camera Scripts/SmoothLookAt.js'
+'Assets/Standard Assets/Scripts/General Scripts/DragRigidbody.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/AttackingOdysseus.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/Borrowed/AutoWayPoint.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/Borrowed/Enemy.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/Borrowed/MaidAI.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/Borrowed/TargetDamage.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/CacheScript.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/GUI/GuiLevel1.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/GUI/GuiLevel2.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/Level1Manager.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/Level2Manager.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/Level3Manager.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/OdysseusArrowScript.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/Projectiles/ArrowScript.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/Projectiles/ArrowsLevel2.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/RunningSuitorAI.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/ShootingOdysseus.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/ShootingSuitorAI.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/ShootingTelemachusAI.js'
+'Assets/Standard Assets/Scripts/Odyssey Scripts/SneakingOdysseus.js'
+'Assets/Standard Assets/Scripts/TofuBallScript.js'
+'Assets/Standard Assets/Scripts/TofuCannon.js'
+'Assets/Standard Assets/Scripts/UnderWaterTriggerScript.js'
